@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guardians_of_health/Splash/splash_screen.dart';
+import 'package:guardians_of_health/user%20pages/Splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
