@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "609237444915",
+    "project_id": "guardians-of-health1",
+    "storage_bucket": "guardians-of-health1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609237444915:android:0a7743e09f0fb212a47646",
+        "android_client_info": {
+          "package_name": "com.example.guardians_of_health"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs3I2dTAUyGBEl629FqnggSi9T0wrS8DI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
