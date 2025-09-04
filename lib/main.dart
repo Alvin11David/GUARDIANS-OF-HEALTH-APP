@@ -6,3 +6,4 @@ import 'package:guardians_of_health/user pages/dashboards/trends&stats_screen.da
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
