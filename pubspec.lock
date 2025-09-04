@@ -299,4 +299,4 @@ version: "1.1.0"
 path_provider: 
 dependency: transitive 
 description: 
-name: 
+name: path_provider 
