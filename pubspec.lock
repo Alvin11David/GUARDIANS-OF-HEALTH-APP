@@ -371,4 +371,4 @@ version: "2.1.8"
 sky_engine: 
 dependency: transitive 
 description: flutter 
-source: 
+source: sdk 
