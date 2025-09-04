@@ -17,3 +17,4 @@ FLTFirebaseAuthPlugin.register(with: registry.registrar(forPlugin: "FLTFirebaseA
 FLTFirebaseCorePlugin.register(with: registry.registrar(forPlugin: "FLTFirebaseCorePlugin")) 
 PathProviderPlugin.register(with: registry.registrar(forPlugin: "PathProviderPlugin")) 
 WebViewFlutterPlugin.register(with: registry.registrar(forPlugin: "WebViewFlutterPlugin")) 
+} 
