@@ -132,4 +132,4 @@ version: "8.1.1"
 firebase_auth_web: 
 dependency: transitive 
 description: 
-name: 
+name: firebase_auth_web 
