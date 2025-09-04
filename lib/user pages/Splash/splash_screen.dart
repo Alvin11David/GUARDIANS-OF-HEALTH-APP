@@ -57,7 +57,7 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
 
   @override
   Widget build(BuildContext context) {
-    final double size = MediaQuery.of(context).size.width * 0.5;
+    final double size = MediaQuery.of(context).size.width * 1;
     final double center = size / 2;
     final List<double> radii = [
       size * 0.17,
@@ -65,9 +65,9 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
       size * 0.49,
     ];
     final List<String> images = [
-      'images/Ellipse1.png',
-      'images/Ellipse2.png',
-      'images/Ellipse3.png',
+      'assets/images/Ellipse1.png',
+      'assets/images/Ellipse2.png',
+      'assets/images/Ellipse3.png',
     ];
 
     return SizedBox(
@@ -95,8 +95,8 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
                     top: y,
                     child: Image.asset(
                       images[i],
-                      width: 32,
-                      height: 32,
+                      width: 35,
+                      height: 35,
                     ),
                   );
                 }),
