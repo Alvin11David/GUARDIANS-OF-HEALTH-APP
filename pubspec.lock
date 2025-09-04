@@ -167,4 +167,4 @@ description: flutter
 source: sdk 
 version: "0.0.0" 
 flutter_lints: 
-dependency: "direct 
+dependency: "direct dev" 
