@@ -65,3 +65,4 @@ sha256: "40352e39877338faf428155e0ff0ba8b531e13e0bc71a86b35acb56cbd6c07a1"
 url: "https://pub.dev" 
 source: hosted 
 version: "7.0.1" 
+cloud_firestore_web: 
