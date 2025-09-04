@@ -20,4 +20,4 @@ list(APPEND PLUGIN_BUNDLED_LIBRARIES $<TARGET_FILE:${plugin}_plugin>)
 list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${plugin}_bundled_libraries}) 
 endforeach(plugin) 
 
-foreach(ffi_plugin 
+foreach(ffi_plugin ${FLUTTER_FFI_PLUGIN_LIST}) 
