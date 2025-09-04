@@ -448,4 +448,4 @@ version: "1.1.13"
 vector_graphics_compiler: 
 dependency: transitive 
 description: 
-name: 
+name: vector_graphics_compiler 
