@@ -17,3 +17,4 @@ FirebaseAuthPluginCApiRegisterWithRegistrar(
 registry->GetRegistrarForPlugin("FirebaseAuthPluginCApi")); 
 FirebaseCorePluginCApiRegisterWithRegistrar( 
 registry->GetRegistrarForPlugin("FirebaseCorePluginCApi")); 
+} 
