@@ -513,3 +513,4 @@ xdg_directories:
 dependency: transitive 
 description: 
 name: xdg_directories 
+sha256: 
