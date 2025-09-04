@@ -480,4 +480,4 @@ version: "1.1.1"
 webview_flutter: 
 dependency: "direct main" 
 description: 
-name: 
+name: webview_flutter 
