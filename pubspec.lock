@@ -68,3 +68,4 @@ version: "7.0.1"
 cloud_firestore_web: 
 dependency: transitive 
 description: 
+name: 
