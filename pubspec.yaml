@@ -39,3 +39,4 @@ firebase_core:
 # Firebase Authentication 
 firebase_auth: 
 # IOS firestore 
+cloud_firestore: 
