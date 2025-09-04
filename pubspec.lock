@@ -170,3 +170,4 @@ flutter_lints:
 dependency: "direct dev" 
 description: 
 name: flutter_lints 
+sha256: 
