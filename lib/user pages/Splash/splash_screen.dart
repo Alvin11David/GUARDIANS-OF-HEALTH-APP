@@ -45,7 +45,7 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 4),
+      duration: const Duration(seconds: 10),
     )..repeat();
   }
 
@@ -57,13 +57,20 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
 
   @override
   Widget build(BuildContext context) {
-    final double size = MediaQuery.of(context).size.width * 1;
+    // Use the smaller of width or height to ensure responsiveness and fit within screen
+    final double screenSize = Math.min(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    final double size = screenSize * 1; // Scale to 90% of smallest dimension
     final double center = size / 2;
+    // Define radii as proportions of the size for larger circles
     final List<double> radii = [
-      size * 0.17,
-      size * 0.33,
-      size * 0.49,
+      size * 0.35, // Innermost circle
+      size * 0.60, // Middle circle
+      size * 0.85, // Outermost circle
     ];
+
     final List<String> images = [
       'assets/images/Ellipse1.png',
       'assets/images/Ellipse2.png',
@@ -78,25 +85,26 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
         children: [
           CustomPaint(
             size: Size(size, size),
-            painter: ConcentricCirclesPainter(),
+            painter: ConcentricCirclesPainter(radii: radii),
           ),
           AnimatedBuilder(
             animation: _controller,
             builder: (context, child) {
               final double angle = _controller.value * 2 * Math.pi;
-              final List<double> phaseOffsets = [0, 2, 4]; // phase offset for each image
+              final List<double> phaseOffsets = [0, 2, 4]; // Phase offset for each image
               return Stack(
                 children: List.generate(3, (i) {
                   final double theta = angle + phaseOffsets[i];
-                  final double x = center + radii[i] * Math.cos(theta) - 16;
-                  final double y = center + radii[i] * Math.sin(theta) - 16;
+                  // Position images exactly on their respective circles
+                  final double x = center + radii[i] * Math.cos(theta) - 17.5; // Adjust for image size
+                  final double y = center + radii[i] * Math.sin(theta) - 17.5;
                   return Positioned(
                     left: x,
                     top: y,
                     child: Image.asset(
                       images[i],
-                      width: 35,
-                      height: 35,
+                      width: size * 0.1, // Scale image size relative to screen
+                      height: size * 0.1,
                     ),
                   );
                 }),
@@ -110,6 +118,10 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
 }
 
 class ConcentricCirclesPainter extends CustomPainter {
+  final List<double> radii;
+
+  ConcentricCirclesPainter({required this.radii});
+
   @override
   void paint(Canvas canvas, Size size) {
     final Paint paint = Paint()
@@ -121,11 +133,11 @@ class ConcentricCirclesPainter extends CustomPainter {
 
     final Paint blackStroke = paint..color = Colors.black;
 
-    // Draw three concentric circles
-    for (int i = 1; i <= 3; i++) {
+    // Draw concentric circles using provided radii
+    for (double radius in radii) {
       canvas.drawCircle(
         Offset(size.width / 2, size.height / 2),
-        size.width * 0.16 * i,
+        radius,
         blackStroke,
       );
     }
