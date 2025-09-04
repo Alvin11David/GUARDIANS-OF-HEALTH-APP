@@ -35,3 +35,4 @@ sdk: flutter
 # Use with the CupertinoIcons class for iOS style icons. 
 cupertino_icons: ^1.0.8 
 # Firebase Initialization 
+firebase_core: 
