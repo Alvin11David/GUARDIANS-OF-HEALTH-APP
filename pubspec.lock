@@ -339,4 +339,4 @@ version: "2.1.2"
 path_provider_windows: 
 dependency: transitive 
 description: 
-name: 
+name: path_provider_windows 
