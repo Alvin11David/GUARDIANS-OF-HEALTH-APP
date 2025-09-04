@@ -310,4 +310,4 @@ description:
 name: path_provider_android 
 sha256: "993381400e94d18469750e5b9dcb8206f15bc09f9da86b9e44a9b0092a0066db" 
 url: "https://pub.dev" 
-source: 
+source: hosted 
