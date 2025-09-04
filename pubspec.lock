@@ -501,3 +501,4 @@ sha256: "63d26ee3aca7256a83ccb576a50272edd7cfc80573a4305caa98985feb493ee0"
 url: "https://pub.dev" 
 source: hosted 
 version: "2.14.0" 
+webview_flutter_wkwebview: 
