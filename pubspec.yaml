@@ -44,4 +44,4 @@ cloud_firestore:
 google_fonts: 
 flutter_svg: ^2.0.10+1 
 font_awesome_flutter: ^10.7.0 
-webview_flutter: 
+webview_flutter: ^4.8.0 
