@@ -186,3 +186,4 @@ flutter_test:
 dependency: "direct dev" 
 description: flutter 
 source: sdk 
+version: 
