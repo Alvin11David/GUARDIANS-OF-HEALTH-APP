@@ -22,7 +22,38 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFDFD6C9),
-      body: Center(child: AnimatedRadialCircles()),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: Center(child: AnimatedRadialCircles())),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 30),
+              child: Column(
+                children:  [
+                  Text(
+                    'Guardians of Health',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontFamily: 'Lufga',
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Fighting Antimicrobial Resistance Together',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontFamily: 'Lufga',
+                    ),
+                  ),
+                ],
+              ),),
+        ],
+      ),
     );
   }
 }
@@ -87,8 +118,8 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
           ),
           Image.asset(
             'assets/logo/logo.png',
-            width: size * 0.2,
-            height: size * 0.2,
+            width: size * 0.25,
+            height: size * 0.25,
           ),
           AnimatedBuilder(
             animation: _controller,
