@@ -11,4 +11,4 @@ import firebase_core
 import path_provider_foundation 
 import webview_flutter_wkwebview 
 
-func 
+func RegisterGeneratedPlugins(registry: 
