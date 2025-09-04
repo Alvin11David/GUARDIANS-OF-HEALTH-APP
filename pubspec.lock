@@ -124,4 +124,4 @@ version: "6.0.2"
 firebase_auth_platform_interface: 
 dependency: transitive 
 description: 
-name: 
+name: firebase_auth_platform_interface 
