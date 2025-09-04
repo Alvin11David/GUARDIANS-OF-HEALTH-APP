@@ -456,4 +456,4 @@ version: "1.1.19"
 vector_math: 
 dependency: transitive 
 description: 
-name: 
+name: vector_math 
