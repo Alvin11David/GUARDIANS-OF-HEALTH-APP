@@ -7,4 +7,4 @@ import Foundation
 
 import cloud_firestore 
 import firebase_auth 
-import 
+import firebase_core 
