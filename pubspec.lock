@@ -503,3 +503,4 @@ source: hosted
 version: "2.14.0" 
 webview_flutter_wkwebview: 
 dependency: transitive 
+description: 
