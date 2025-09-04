@@ -119,4 +119,4 @@ description:
 name: firebase_auth 
 sha256: b843f8b6897654899bfc437e385f710f79fdf1fe872ce629cbdf6017772d5803 
 url: "https://pub.dev" 
-source: 
+source: hosted 
