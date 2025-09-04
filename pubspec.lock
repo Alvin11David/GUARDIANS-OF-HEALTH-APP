@@ -156,4 +156,4 @@ version: "6.0.0"
 firebase_core_web: 
 dependency: transitive 
 description: 
-name: 
+name: firebase_core_web 
