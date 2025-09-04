@@ -295,4 +295,4 @@ name: path_parsing
 sha256: "883402936929eac138ee0a45da5b0f2c80f89913e6dc3bf77eb65b84b409c6ca" 
 url: "https://pub.dev" 
 source: hosted 
-version: 
+version: "1.1.0" 
