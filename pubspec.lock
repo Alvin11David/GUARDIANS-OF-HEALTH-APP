@@ -327,4 +327,4 @@ name: path_provider_linux
 sha256: f7a1fe3a634fe7734c8d3f2766ad746ae2a2884abe22e241a8b301bf5cac3279 
 url: "https://pub.dev" 
 source: hosted 
-version: 
+version: "2.2.1" 
