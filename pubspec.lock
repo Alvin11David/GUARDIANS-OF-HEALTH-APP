@@ -382,3 +382,4 @@ url: "https://pub.dev"
 source: hosted 
 version: "1.10.1" 
 stack_trace: 
+dependency: 
