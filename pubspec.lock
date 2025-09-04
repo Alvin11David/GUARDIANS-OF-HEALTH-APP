@@ -428,4 +428,4 @@ name: typed_data
 sha256: f9049c039ebfeb4cf7a7104a675823cd72dba8297f264b6637062516699fa006 
 url: "https://pub.dev" 
 source: hosted 
-version: 
+version: "1.4.0" 
