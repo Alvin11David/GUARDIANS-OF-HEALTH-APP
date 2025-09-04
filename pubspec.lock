@@ -440,3 +440,4 @@ version: "1.1.19"
 vector_graphics_codec: 
 dependency: transitive 
 description: 
+name: 
