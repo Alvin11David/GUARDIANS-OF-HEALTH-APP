@@ -133,3 +133,4 @@ firebase_auth_web:
 dependency: transitive 
 description: 
 name: firebase_auth_web 
+sha256: 
