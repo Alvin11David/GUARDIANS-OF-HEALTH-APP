@@ -93,4 +93,4 @@ assets:
 # style: italic 
 # - family: Trajan Pro 
 # fonts: 
-# - asset: 
+# - asset: fonts/TrajanPro.ttf 
