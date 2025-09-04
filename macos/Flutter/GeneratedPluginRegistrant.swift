@@ -12,4 +12,4 @@ import path_provider_foundation
 import webview_flutter_wkwebview 
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) { 
-FLTFirebaseFirestorePlugin.register(with: registry.registrar(forPlugin: 
+FLTFirebaseFirestorePlugin.register(with: registry.registrar(forPlugin: "FLTFirebaseFirestorePlugin")) 
