@@ -16,3 +16,4 @@ set(PLUGIN_BUNDLED_LIBRARIES)
 foreach(plugin ${FLUTTER_PLUGIN_LIST}) 
 add_subdirectory(flutter/ephemeral/.plugin_symlinks/${plugin}/windows plugins/${plugin}) 
 target_link_libraries(${BINARY_NAME} PRIVATE ${plugin}_plugin) 
+list(APPEND 
