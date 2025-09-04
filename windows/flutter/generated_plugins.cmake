@@ -18,3 +18,4 @@ add_subdirectory(flutter/ephemeral/.plugin_symlinks/${plugin}/windows plugins/${
 target_link_libraries(${BINARY_NAME} PRIVATE ${plugin}_plugin) 
 list(APPEND PLUGIN_BUNDLED_LIBRARIES $<TARGET_FILE:${plugin}_plugin>) 
 list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${plugin}_bundled_libraries}) 
+endforeach(plugin) 
