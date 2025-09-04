@@ -364,3 +364,4 @@ plugin_platform_interface:
 dependency: transitive 
 description: 
 name: plugin_platform_interface 
+sha256: 
