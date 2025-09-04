@@ -191,3 +191,4 @@ flutter_web_plugins:
 dependency: transitive 
 description: flutter 
 source: sdk 
+version: 
