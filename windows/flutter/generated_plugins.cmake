@@ -8,4 +8,4 @@ firebase_auth
 firebase_core 
 ) 
 
-list(APPEND 
+list(APPEND FLUTTER_FFI_PLUGIN_LIST 
