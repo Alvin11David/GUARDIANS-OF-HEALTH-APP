@@ -49,4 +49,4 @@ webview_flutter: ^4.8.0
 
 dev_dependencies: 
 flutter_test: 
-sdk: 
+sdk: flutter 
