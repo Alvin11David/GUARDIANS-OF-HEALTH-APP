@@ -62,3 +62,4 @@ flutter_lints: ^5.0.0
 # following page: https://dart.dev/tools/pub/pubspec 
 
 # The following section is specific to Flutter packages. 
+flutter: 
