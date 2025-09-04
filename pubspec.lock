@@ -374,4 +374,4 @@ description: flutter
 source: sdk 
 version: "0.0.0" 
 source_span: 
-dependency: 
+dependency: transitive 
