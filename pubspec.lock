@@ -169,4 +169,4 @@ version: "0.0.0"
 flutter_lints: 
 dependency: "direct dev" 
 description: 
-name: 
+name: flutter_lints 
