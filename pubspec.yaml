@@ -42,3 +42,4 @@ firebase_auth:
 cloud_firestore: 
 # Google Fonts 
 google_fonts: 
+flutter_svg: 
