@@ -435,4 +435,4 @@ description:
 name: vector_graphics 
 sha256: a4f059dc26fc8295b5921376600a194c4ec7d55e72f2fe4c7d2831e103d461e6 
 url: "https://pub.dev" 
-source: 
+source: hosted 
