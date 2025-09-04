@@ -141,3 +141,4 @@ firebase_core:
 dependency: "direct main" 
 description: 
 name: firebase_core 
+sha256: 
