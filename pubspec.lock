@@ -297,4 +297,4 @@ url: "https://pub.dev"
 source: hosted 
 version: "1.1.0" 
 path_provider: 
-dependency: 
+dependency: transitive 
