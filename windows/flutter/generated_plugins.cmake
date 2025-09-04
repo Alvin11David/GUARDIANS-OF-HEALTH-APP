@@ -22,3 +22,4 @@ endforeach(plugin)
 
 foreach(ffi_plugin ${FLUTTER_FFI_PLUGIN_LIST}) 
 add_subdirectory(flutter/ephemeral/.plugin_symlinks/${ffi_plugin}/windows plugins/${ffi_plugin}) 
+list(APPEND 
