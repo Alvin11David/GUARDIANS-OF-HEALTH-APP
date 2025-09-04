@@ -126,4 +126,4 @@ dependency: transitive
 description: 
 name: firebase_auth_platform_interface 
 sha256: c7acba5e95dc8095149c4534e968d61099896f1a09421d46d7c3fc3069082a37 
-url: 
+url: "https://pub.dev" 
