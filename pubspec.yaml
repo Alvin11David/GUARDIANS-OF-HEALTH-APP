@@ -46,3 +46,5 @@ flutter_svg: ^2.0.10+1
 font_awesome_flutter: ^10.7.0 
 webview_flutter: ^4.8.0 
 # Chart library - using custom implementation 
+
+dev_dependencies: 
