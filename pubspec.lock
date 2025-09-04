@@ -71,3 +71,4 @@ description:
 name: cloud_firestore_web 
 sha256: "4f96eb9e9ff63c2139e52ee2c13a36ddbf16bdbe17a435b56cc50fa2522ad101" 
 url: "https://pub.dev" 
+source: 
