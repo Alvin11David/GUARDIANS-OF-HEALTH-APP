@@ -125,3 +125,4 @@ firebase_auth_platform_interface:
 dependency: transitive 
 description: 
 name: firebase_auth_platform_interface 
+sha256: 
