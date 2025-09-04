@@ -401,3 +401,4 @@ string_scanner:
 dependency: transitive 
 description: 
 name: string_scanner 
+sha256: 
