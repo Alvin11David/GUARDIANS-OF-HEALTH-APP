@@ -2,4 +2,4 @@
 // Generated file. Do not edit. 
 // 
 
-import 
+import FlutterMacOS 
