@@ -21,3 +21,4 @@ class MyApp extends StatelessWidget {
       title: 'Guardians Of Health',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
