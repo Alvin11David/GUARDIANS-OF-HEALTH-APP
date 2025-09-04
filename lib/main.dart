@@ -20,3 +20,4 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Guardians Of Health',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
