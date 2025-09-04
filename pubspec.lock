@@ -527,3 +527,4 @@ source: hosted
 version: "6.6.1" 
 sdks: 
 dart: ">=3.8.1 <4.0.0" 
+flutter: 
