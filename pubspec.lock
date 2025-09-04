@@ -340,3 +340,4 @@ path_provider_windows:
 dependency: transitive 
 description: 
 name: path_provider_windows 
+sha256: 
