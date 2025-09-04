@@ -147,3 +147,4 @@ source: hosted
 version: "4.1.0" 
 firebase_core_platform_interface: 
 dependency: transitive 
+description: 
