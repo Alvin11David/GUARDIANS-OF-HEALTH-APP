@@ -22,9 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFDFD6C9),
-      body: Center(
-        child: AnimatedRadialCircles(),
-      ),
+      body: Center(child: AnimatedRadialCircles()),
     );
   }
 }
@@ -87,16 +85,28 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
             size: Size(size, size),
             painter: ConcentricCirclesPainter(radii: radii),
           ),
+          Image.asset(
+            'assets/logo/logo.png',
+            width: size * 0.2,
+            height: size * 0.2,
+          ),
           AnimatedBuilder(
             animation: _controller,
             builder: (context, child) {
               final double angle = _controller.value * 2 * Math.pi;
-              final List<double> phaseOffsets = [0, 2, 4]; // Phase offset for each image
+              final List<double> phaseOffsets = [
+                0,
+                2,
+                4,
+              ]; // Phase offset for each image
               return Stack(
                 children: List.generate(3, (i) {
                   final double theta = angle + phaseOffsets[i];
                   // Position images exactly on their respective circles
-                  final double x = center + radii[i] * Math.cos(theta) - 17.5; // Adjust for image size
+                  final double x =
+                      center +
+                      radii[i] * Math.cos(theta) -
+                      17.5; // Adjust for image size
                   final double y = center + radii[i] * Math.sin(theta) - 17.5;
                   return Positioned(
                     left: x,
