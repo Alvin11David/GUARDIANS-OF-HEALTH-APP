@@ -332,3 +332,4 @@ path_provider_platform_interface:
 dependency: transitive 
 description: 
 name: path_provider_platform_interface 
+sha256: 
