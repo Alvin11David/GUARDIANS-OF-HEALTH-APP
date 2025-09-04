@@ -7,3 +7,5 @@ cloud_firestore
 firebase_auth 
 firebase_core 
 ) 
+
+list(APPEND 
