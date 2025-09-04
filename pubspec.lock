@@ -66,4 +66,4 @@ url: "https://pub.dev"
 source: hosted 
 version: "7.0.1" 
 cloud_firestore_web: 
-dependency: 
+dependency: transitive 
