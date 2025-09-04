@@ -2,4 +2,4 @@
 # Generated file, do not edit. 
 # 
 
-list(APPEND 
+list(APPEND FLUTTER_PLUGIN_LIST 
