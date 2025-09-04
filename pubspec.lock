@@ -117,3 +117,4 @@ firebase_auth:
 dependency: "direct main" 
 description: 
 name: firebase_auth 
+sha256: 
