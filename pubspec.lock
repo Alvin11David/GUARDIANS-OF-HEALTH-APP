@@ -115,3 +115,4 @@ source: hosted
 version: "2.1.4" 
 firebase_auth: 
 dependency: "direct main" 
+description: 
