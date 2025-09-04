@@ -139,3 +139,4 @@ source: hosted
 version: "6.0.2" 
 firebase_core: 
 dependency: "direct main" 
+description: 
