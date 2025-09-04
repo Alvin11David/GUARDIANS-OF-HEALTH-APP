@@ -320,3 +320,4 @@ sha256: "16eef174aacb07e09c351502740fa6254c165757638eba1e9116b0a781201bbd"
 url: "https://pub.dev" 
 source: hosted 
 version: "2.4.2" 
+path_provider_linux: 
