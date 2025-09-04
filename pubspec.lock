@@ -56,4 +56,4 @@ name: cloud_firestore
 sha256: "2dd78895bf0b18259d195113e5d9577ff3e5e54206887ff6e1423b22c2895e6c" 
 url: "https://pub.dev" 
 source: hosted 
-version: 
+version: "6.0.1" 
