@@ -225,3 +225,4 @@ url: "https://pub.dev"
 source: hosted 
 version: "4.1.2" 
 leak_tracker: 
+dependency: 
