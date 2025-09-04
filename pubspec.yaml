@@ -48,3 +48,4 @@ webview_flutter: ^4.8.0
 # Chart library - using custom implementation 
 
 dev_dependencies: 
+flutter_test: 
