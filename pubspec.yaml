@@ -37,3 +37,4 @@ cupertino_icons: ^1.0.8
 # Firebase Initialization 
 firebase_core: 
 # Firebase Authentication 
+firebase_auth: 
