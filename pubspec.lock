@@ -344,3 +344,4 @@ sha256: bd6f00dbd873bfb70d0761682da2b3a2c2fccc2b9e84c495821639601d81afe7
 url: "https://pub.dev" 
 source: hosted 
 version: "2.3.0" 
+petitparser: 
