@@ -12,3 +12,4 @@
 
 void RegisterPlugins(flutter::PluginRegistry* registry) { 
 CloudFirestorePluginCApiRegisterWithRegistrar( 
+registry->GetRegistrarForPlugin("CloudFirestorePluginCApi")); 
