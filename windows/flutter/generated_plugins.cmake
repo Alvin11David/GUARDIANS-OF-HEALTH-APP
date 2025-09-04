@@ -10,3 +10,5 @@ firebase_core
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST 
 ) 
+
+set(PLUGIN_BUNDLED_LIBRARIES) 
