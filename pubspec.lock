@@ -69,3 +69,4 @@ cloud_firestore_web:
 dependency: transitive 
 description: 
 name: cloud_firestore_web 
+sha256: 
