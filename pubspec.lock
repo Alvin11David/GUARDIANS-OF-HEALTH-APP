@@ -323,3 +323,4 @@ version: "2.4.2"
 path_provider_linux: 
 dependency: transitive 
 description: 
+name: 
