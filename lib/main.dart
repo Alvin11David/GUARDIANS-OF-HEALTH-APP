@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:guardians_of_health/user%20pages/Splash/splash_screen.dart';
+import 'package:guardians_of_health/user%20pages/dashboards/details_screen.dart';
+import 'package:guardians_of_health/user%20pages/dashboards/bookmarks_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:guardians_of_health/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -22,7 +27,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const SplashScreen(),
-        
+        '/details': (context) => const DetailsScreen(),
+        '/bookmarks': (context) => const BookmarksScreen(),
       },
     );
   }
