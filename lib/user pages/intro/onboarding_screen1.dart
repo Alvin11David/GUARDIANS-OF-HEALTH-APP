@@ -43,22 +43,21 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                   decoration: BoxDecoration(
                     color: _isGlowing ? Colors.white.withOpacity(0.2) : Colors.transparent,
                     border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(screenWidth * 0.04),
+                    borderRadius: BorderRadius.circular(screenWidth * 0.02),
                   ),
                   child: Text(
                     'Skip',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: screenWidth * 0.03,
+                      fontSize: screenWidth * 0.04,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Lufga',
                     ),
                   ),
                 ),
               ),
             ),
             Positioned(
-              top: screenHeight * 0.13,
+              top: screenHeight * 0.08,
               left: screenWidth * 0.05,
               child: Text(
                 'AWARE',
@@ -66,25 +65,25 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                   color: Colors.white,
                   fontSize: 80,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Lufga',
                 ),
                 textAlign: TextAlign.left,
               ),
             ),
+            // Base "NESS" with only "SS" visible behind the image
             Positioned(
-              top: screenHeight * 0.24,
-              right: screenWidth * 0.05,
+              top: screenHeight * 0.23,
+              right: screenWidth * 0.01 + (30 * 2 * 0.6), // Position after approximate "NE" width
               child: Text(
-                'NESS',
+                'SS',
                 style: TextStyle(
-                  fontSize: 80,
+                  fontSize: 81,
                   fontWeight: FontWeight.bold,
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
-                    ..strokeWidth = 3
+                    ..strokeWidth = 5
                     ..color = Colors.white,
                 ),
-                textAlign: TextAlign.right,
+                textAlign: TextAlign.left,
               ),
             ),
             Positioned(
@@ -93,8 +92,25 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
               child: Image.asset(
                 'assets/images/onboarding1.png',
                 width: screenWidth * 0.6,
-                height: screenHeight * 0.8,
+                height: screenHeight * 0.82,
                 fit: BoxFit.contain,
+              ),
+            ),
+            // "NE" on top of the image
+            Positioned(
+              top: screenHeight * 0.23,
+              right: screenWidth * 0.41, // Start at the same left position as the original "NESS"
+              child: Text(
+                'NE',
+                style: TextStyle(
+                  fontSize: 80,
+                  fontWeight: FontWeight.bold,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 5
+                    ..color = Colors.white,
+                ),
+                textAlign: TextAlign.left,
               ),
             ),
           ],
