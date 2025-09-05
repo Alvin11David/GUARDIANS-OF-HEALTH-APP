@@ -57,6 +57,46 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                 ),
               ),
             ),
+            Positioned(
+              top: screenHeight * 0.13,
+              left: screenWidth * 0.05,
+              child: Text(
+                'AWARE',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 80,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Lufga',
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            Positioned(
+              top: screenHeight * 0.24,
+              right: screenWidth * 0.05,
+              child: Text(
+                'NESS',
+                style: TextStyle(
+                  fontSize: 80,
+                  fontWeight: FontWeight.bold,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 3
+                    ..color = Colors.white,
+                ),
+                textAlign: TextAlign.right,
+              ),
+            ),
+            Positioned(
+              bottom: screenHeight * 0.05,
+              right: screenWidth * 0.05,
+              child: Image.asset(
+                'assets/images/onboarding1.png',
+                width: screenWidth * 0.6,
+                height: screenHeight * 0.8,
+                fit: BoxFit.contain,
+              ),
+            ),
           ],
         ),
       ),

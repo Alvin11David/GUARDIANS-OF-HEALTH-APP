@@ -57,6 +57,19 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                 ),
               ),
             ),
+            Positioned(
+              top: screenHeight * 0.13,
+              left: screenWidth * 0.05,
+              child: Text(
+                'MOBILE',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Lufga',
+                )
+              )
+            ),
           ],
         ),
       ),

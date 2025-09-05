@@ -57,6 +57,29 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
                 ),
               ),
             ),
+            Positioned(
+              top: screenHeight * 0.13,
+              left: screenWidth * 0.05,
+              child: Text(
+                'DASHB',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Lufga',
+                )
+              )
+            ),
+            Positioned(
+              bottom: screenHeight * 0.05,
+              right: screenWidth * 0.05,
+              child: Image.asset(
+                'assets/images/onboarding2.2.png',
+                width: screenWidth * 0.6,
+                height: screenHeight * 0.8,
+                fit: BoxFit.contain,
+              ),
+            ),
           ],
         ),
       ),
