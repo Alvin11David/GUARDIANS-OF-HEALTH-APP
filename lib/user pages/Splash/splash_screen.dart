@@ -95,9 +95,9 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
     final double center = size / 2;
     // Define radii as proportions of the size for larger circles
     final List<double> radii = [
-      size * 0.35, // Innermost circle
-      size * 0.60, // Middle circle
-      size * 0.85, // Outermost circle
+      size * 0.25, // Innermost circle
+      size * 0.45, // Middle circle
+      size * 0.7, // Outermost circle
     ];
 
     final List<String> images = [
@@ -132,7 +132,8 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
               ]; // Phase offset for each image
               return Stack(
                 children: List.generate(3, (i) {
-                  final double theta = angle + phaseOffsets[i];
+                  final double direction = (i == 1) ? 1.0 : -1.0;
+                  final double theta = direction * angle + phaseOffsets[i];
                   // Position images exactly on their respective circles
                   final double x =
                       center +
