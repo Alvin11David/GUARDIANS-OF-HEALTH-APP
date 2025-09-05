@@ -9,13 +9,28 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+  late AnimationController _progressController;
+
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 9), () {
-      Navigator.of(context).pushReplacementNamed('/');
+    _progressController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 5),
+    )..addListener(() {
+      setState(() {}); // Ensure the widget rebuilds on each animation tick
+    })..forward();
+    
+    Timer(const Duration(seconds: 5), () {
+      Navigator.of(context).pushReplacementNamed('/onboarding1');
     });
+  }
+
+  @override
+  void dispose() {
+    _progressController.dispose();
+    super.dispose();
   }
 
   @override
@@ -25,33 +40,44 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(
-            child: Center(child: AnimatedRadialCircles())),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 30),
-              child: Column(
-                children:  [
-                  Text(
-                    'Guardians of Health',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontFamily: 'Lufga',
-                    ),
+          Expanded(child: Center(child: AnimatedRadialCircles())),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+            child: Column(
+              children: [
+                Text(
+                  'Guardians of Health',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontFamily: 'Lufga',
                   ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Fighting Antimicrobial Resistance Together',
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontFamily: 'Lufga',
-                    ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  'Fighting Antimicrobial Resistance Together',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontFamily: 'Lufga',
                   ),
-                ],
-              ),),
+                ),
+                SizedBox(height: 16),
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: CircularProgressIndicator(
+                    value: _progressController.value,
+                    backgroundColor: Colors.black, // Simplified to pure black for clarity
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white), // Pure white for contrast
+                    strokeWidth: 5,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -86,18 +112,16 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
 
   @override
   Widget build(BuildContext context) {
-    // Use the smaller of width or height to ensure responsiveness and fit within screen
     final double screenSize = Math.min(
       MediaQuery.of(context).size.width,
       MediaQuery.of(context).size.height,
     );
-    final double size = screenSize * 1; // Scale to 90% of smallest dimension
+    final double size = screenSize * 1;
     final double center = size / 2;
-    // Define radii as proportions of the size for larger circles
     final List<double> radii = [
       size * 0.25, // Innermost circle
       size * 0.45, // Middle circle
-      size * 0.7, // Outermost circle
+      size * 0.7,  // Outermost circle
     ];
 
     final List<String> images = [
@@ -125,27 +149,19 @@ class _AnimatedRadialCirclesState extends State<AnimatedRadialCircles>
             animation: _controller,
             builder: (context, child) {
               final double angle = _controller.value * 2 * Math.pi;
-              final List<double> phaseOffsets = [
-                0,
-                2,
-                4,
-              ]; // Phase offset for each image
+              final List<double> phaseOffsets = [0, 2, 4];
               return Stack(
                 children: List.generate(3, (i) {
                   final double direction = (i == 1) ? 1.0 : -1.0;
                   final double theta = direction * angle + phaseOffsets[i];
-                  // Position images exactly on their respective circles
-                  final double x =
-                      center +
-                      radii[i] * Math.cos(theta) -
-                      17.5; // Adjust for image size
+                  final double x = center + radii[i] * Math.cos(theta) - 17.5;
                   final double y = center + radii[i] * Math.sin(theta) - 17.5;
                   return Positioned(
                     left: x,
                     top: y,
                     child: Image.asset(
                       images[i],
-                      width: size * 0.1, // Scale image size relative to screen
+                      width: size * 0.1,
                       height: size * 0.1,
                     ),
                   );
@@ -175,7 +191,6 @@ class ConcentricCirclesPainter extends CustomPainter {
 
     final Paint blackStroke = paint..color = Colors.black;
 
-    // Draw concentric circles using provided radii
     for (double radius in radii) {
       canvas.drawCircle(
         Offset(size.width / 2, size.height / 2),
