@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     })..forward();
     
     Timer(const Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacementNamed('/onboarding1');
+      Navigator.of(context).pushReplacementNamed('/OnboardingScreen1');
     });
   }
 

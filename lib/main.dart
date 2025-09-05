@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guardians_of_health/firebase_options.dart';
 import 'package:guardians_of_health/user%20pages/Splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:guardians_of_health/user%20pages/intro/onboarding_screen1.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,9 +24,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
-        
+        '/OnboardingScreen1': (context) => const OnboardingScreen1(),
       },
     );
   }
