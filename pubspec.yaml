@@ -40,6 +40,7 @@ dependencies:
   firebase_auth:
   # IOS firestore
   cloud_firestore:
+  
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,8 @@ flutter:
   
   assets:
     - assets/images/
+    - assets/logo/
+    - assets/vectors/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
