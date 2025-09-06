@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guardians_of_health/firebase_options.dart';
 import 'package:guardians_of_health/user%20pages/Splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:guardians_of_health/user%20pages/dashboards/doctor_profile_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       routes: {
-        '/': (context) => const SplashScreen(),
+        '/': (context) => DoctorProfileScreen(),
         
       },
     );
