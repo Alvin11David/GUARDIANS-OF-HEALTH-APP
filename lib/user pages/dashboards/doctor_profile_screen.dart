@@ -4,7 +4,8 @@ class DoctorProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double iconSize = MediaQuery.of(context).size.width * 0.12;
-    final double textSize = MediaQuery.of(context).size.height * 0.025; // Reduced text size slightly
+    final double textSize = MediaQuery.of(context).size.height * 0.025;
+    final double imageWidth = MediaQuery.of(context).size.width * 0.8; // 80% of screen width for responsiveness
     return Scaffold(
       backgroundColor: Color(0xFFEFE6E6),
       body: SafeArea(
@@ -86,6 +87,17 @@ class DoctorProfileScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                   letterSpacing: 0.0,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 2, left: MediaQuery.of(context).size.width * 0.1, right: MediaQuery.of(context).size.width * 0.1), // Further reduced top padding
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  'assets/images/DrBigPic.png',
+                  width: imageWidth,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
