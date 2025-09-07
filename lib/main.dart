@@ -3,14 +3,14 @@ import 'package:guardians_of_health/firebase_options.dart';
 import 'package:guardians_of_health/user%20pages/Splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(const MyApp());
-}
+import 'package:flutter/material.dart';
+import 'user pages/auth/forgot_password.dart';
 
+void main() {
+  runApp(MaterialApp(
+    home: ForgotPasswordScreen(), // Replace with your widget's class name
+  ));
+}
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
