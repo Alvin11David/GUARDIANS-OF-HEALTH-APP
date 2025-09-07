@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart'; // Import Google Fonts
 
 class DoctorProfileScreen extends StatelessWidget {
   @override
@@ -11,6 +12,8 @@ class DoctorProfileScreen extends StatelessWidget {
     final double margin = MediaQuery.of(context).size.width * 0.1; // Left and right margins for "Dr. Bruce Wilberforce"
     final double contentWidth = imageWidth; // Width within the margins, matching "Dr. Bruce Wilberforce"
     final double infoBoxHeight = MediaQuery.of(context).size.height * 0.06; // Approximately 100px scaled responsively
+    final double getInTouchFontSize = MediaQuery.of(context).size.width * 0.045; // Responsive font size for "Get In Touch"
+    final double iconSizeResponsive = MediaQuery.of(context).size.width * 0.14; // Increased responsive icon size
 
     return Scaffold(
       backgroundColor: Color(0xFFEFE6E6),
@@ -171,7 +174,52 @@ class DoctorProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // Placeholder for other content
+            Padding(
+              padding: EdgeInsets.only(
+                top: 8, // Small padding below info text
+                left: margin,
+                right: margin,
+              ),
+              child: Center(
+                child: Text(
+                  'Get In Touch',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: getInTouchFontSize, // Responsive font size
+                  ).merge(GoogleFonts.poppins()), // Apply Poppins font
+                ),
+              ),
+            ),
+            Expanded(
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    left: 32.0, // Matched to bottom margin for equal space
+                    bottom: 32.0, // Consistent with the down margin
+                  ),
+                  child: Container(
+                    width: iconSizeResponsive,
+                    height: iconSizeResponsive,
+                    decoration: BoxDecoration(
+                      color: Colors.white, // White background
+                      shape: BoxShape.circle, // Circular shape
+                      border: Border.all(
+                        color: Colors.green, // Green outline
+                        width: 2.0, // Outline thickness
+                      ),
+                    ),
+                    child: Icon(
+                      Icons.email,
+                      color: Colors.black, // Black icon
+                      size: iconSizeResponsive * 0.8, // Increased icon size
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
