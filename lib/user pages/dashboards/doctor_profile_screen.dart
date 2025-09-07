@@ -6,6 +6,9 @@ class DoctorProfileScreen extends StatelessWidget {
     final double iconSize = MediaQuery.of(context).size.width * 0.12;
     final double textSize = MediaQuery.of(context).size.height * 0.025;
     final double imageWidth = MediaQuery.of(context).size.width * 0.8; // 80% of screen width for responsiveness
+    final double nameFontSize = MediaQuery.of(context).size.width * 0.05; // Responsive font size for "Dr. Bruce Wilberforce"
+    final double barWidth = MediaQuery.of(context).size.width * 0.2; // 20% of screen width, smaller than text
+
     return Scaffold(
       backgroundColor: Color(0xFFEFE6E6),
       body: SafeArea(
@@ -92,12 +95,50 @@ class DoctorProfileScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 2, left: MediaQuery.of(context).size.width * 0.1, right: MediaQuery.of(context).size.width * 0.1),
+              padding: EdgeInsets.only(
+                top: 2,
+                left: MediaQuery.of(context).size.width * 0.1,
+                right: MediaQuery.of(context).size.width * 0.1,
+              ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
                   'assets/images/DrBigPic.png',
                   width: imageWidth,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.02,
+                left: MediaQuery.of(context).size.width * 0.1,
+                right: MediaQuery.of(context).size.width * 0.1,
+              ),
+              child: SizedBox(
+                width: double.infinity,
+                child: Text(
+                  'Dr. Bruce Wilberforce',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                    fontSize: nameFontSize, // responsive font size
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 4, // Small padding to place bar below middle of text
+                left: MediaQuery.of(context).size.width * 0.1,
+                right: MediaQuery.of(context).size.width * 0.1,
+              ),
+              child: Center(
+                child: Image.asset(
+                  'assets/images/blueBar.png',
+                  width: barWidth, // 20% of screen width, smaller than text
+                  height: 8 * (barWidth / 70), // Maintain aspect ratio (70x8)
                   fit: BoxFit.cover,
                 ),
               ),
