@@ -8,6 +8,9 @@ class DoctorProfileScreen extends StatelessWidget {
     final double imageWidth = MediaQuery.of(context).size.width * 0.8; // 80% of screen width for responsiveness
     final double nameFontSize = MediaQuery.of(context).size.width * 0.05; // Responsive font size for "Dr. Bruce Wilberforce"
     final double barWidth = MediaQuery.of(context).size.width * 0.2; // 20% of screen width, smaller than text
+    final double margin = MediaQuery.of(context).size.width * 0.1; // Left and right margins for "Dr. Bruce Wilberforce"
+    final double contentWidth = imageWidth; // Width within the margins, matching "Dr. Bruce Wilberforce"
+    final double infoBoxHeight = MediaQuery.of(context).size.height * 0.06; // Approximately 100px scaled responsively
 
     return Scaffold(
       backgroundColor: Color(0xFFEFE6E6),
@@ -97,8 +100,8 @@ class DoctorProfileScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(
                 top: 2,
-                left: MediaQuery.of(context).size.width * 0.1,
-                right: MediaQuery.of(context).size.width * 0.1,
+                left: margin,
+                right: margin,
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
@@ -112,8 +115,8 @@ class DoctorProfileScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.02,
-                left: MediaQuery.of(context).size.width * 0.1,
-                right: MediaQuery.of(context).size.width * 0.1,
+                left: margin,
+                right: margin,
               ),
               child: SizedBox(
                 width: double.infinity,
@@ -131,8 +134,8 @@ class DoctorProfileScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(
                 top: 4, // Small padding to place bar below middle of text
-                left: MediaQuery.of(context).size.width * 0.1,
-                right: MediaQuery.of(context).size.width * 0.1,
+                left: margin,
+                right: margin,
               ),
               child: Center(
                 child: Image.asset(
@@ -140,6 +143,31 @@ class DoctorProfileScreen extends StatelessWidget {
                   width: barWidth, // 20% of screen width, smaller than text
                   height: 8 * (barWidth / 70), // Maintain aspect ratio (70x8)
                   fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 8, // Small padding below blue bar
+                left: margin,
+                right: margin,
+              ),
+              child: Container(
+                width: contentWidth, // Matches the width within the margins
+                height: infoBoxHeight,
+                color: Colors.transparent, // Colorless text box
+                child: Center(
+                  child: Text(
+                    'BDS. MDS - Infectious Disease Specialist and Oral Implantology. 16 Years Experience',
+                    textAlign: TextAlign.center,
+                    softWrap: true, // Allow natural wrapping
+                    overflow: TextOverflow.visible,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: MediaQuery.of(context).size.width * 0.035, // Responsive font size
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ),
               ),
             ),
