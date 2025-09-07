@@ -41,7 +41,9 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                     vertical: screenHeight * 0.01,
                   ),
                   decoration: BoxDecoration(
-                    color: _isGlowing ? Colors.white.withOpacity(0.2) : Colors.transparent,
+                    color: _isGlowing
+                        ? Colors.white.withOpacity(0.2)
+                        : Colors.transparent,
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(screenWidth * 0.02),
                   ),
@@ -121,11 +123,7 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
               child: Container(
                 width: 370,
                 height: 390,
-                padding: const EdgeInsets.only(
-                  left: 15,
-                  right: 15,
-                  bottom: 15,
-                ),
+                padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(30),
@@ -133,8 +131,11 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                 child: Stack(
                   children: [
                     Positioned(
-                      top: 2, // Align with the top of the container's content area
-                      left: (370 - 15 - 15 - 40) / 2.4 + 0, // Center within available width
+                      top:
+                          2, // Align with the top of the container's content area
+                      left:
+                          (370 - 15 - 15 - 40) / 2.4 +
+                          0, // Center within available width
                       child: Container(
                         width: 40, // Fixed circle diameter
                         height: 40,
@@ -156,7 +157,9 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                     ),
                     Positioned(
                       top: 50, // Below the circle, adjusted for spacing
-                      left: (370 - 15 - 15) / 6 + 0, // Center within available width (370 - 30 padding)
+                      left:
+                          (370 - 15 - 15) / 6 +
+                          0, // Center within available width (370 - 30 padding)
                       child: Text(
                         'The Silent Threat',
                         style: TextStyle(
@@ -168,8 +171,11 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                       ),
                     ),
                     Positioned(
-                      top: 100, // Below "The Silent Threat", adjusted for spacing
-                      left: (370 - 15 - 15) / 30 + 0, // Center within available width (370 - 30 padding)
+                      top:
+                          115, // Below "The Silent Threat", adjusted for spacing
+                      left:
+                          (370 - 15 - 15) / 30 +
+                          0, // Center within available width (370 - 30 padding)
                       child: Text(
                         '"Antimicrobial resistance (AMR) is\nspreading quietly worldwide.\nAwareness is the first step\nto prevention."',
                         style: TextStyle(
@@ -178,6 +184,103 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                           fontWeight: FontWeight.w400,
                         ),
                         textAlign: TextAlign.center, // Centered alignment
+                      ),
+                    ),
+                    // Page indicator
+                    Positioned(
+                      top: 250, // Below the last text, adjusted for spacing
+                      left:
+                          (370 - 15 - 15 - 60) / 3 +
+                          23, // Center within available width (60 is total width of 3 dots)
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 20,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10), // Spacing between dots
+                          Container(
+                            width: 10,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.grey,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          const SizedBox(width: 10), // Spacing between dots
+                          Container(
+                            width: 10,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.grey,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // White rectangle below the indicator with "Next" text and icons
+                    Positioned(
+                      top:
+                          300, // Below the page indicator, adjusted for spacing
+                      left:
+                          (370 - 15 - 15 - 230) / 3.5 +
+                          0, // Center within available width (370 - 30 padding)
+                      child: Container(
+                        width: 230, // Fixed width as requested
+                        height: 50, // Fixed height as requested
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(
+                            30,
+                          ), // 30 border radius as requested
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Expanded(
+                              child: Center(
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 40), // Shift "Next" to the right
+                                  child: Text(
+                                    'Next',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 20, // Fixed font size for consistency
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 2), // Right padding of 2
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.fast_forward,
+                                    color: Colors.green,
+                                    size: 30, // Fixed size for consistency
+                                  ),
+                                  const SizedBox(width: 5), // Spacing between icons
+                                  Icon(
+                                    Icons.fast_forward,
+                                    color: Colors.green,
+                                    size: 30, // Fixed size for consistency
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
