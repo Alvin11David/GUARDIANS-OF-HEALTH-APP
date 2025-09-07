@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guardians_of_health/firebase_options.dart';
 import 'package:guardians_of_health/user%20pages/Splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:guardians_of_health/user%20pages/dashboards/doctor_profile_screen.dart';
 import 'package:guardians_of_health/user%20pages/intro/onboarding_screen1.dart';
 import 'package:guardians_of_health/user%20pages/intro/onboarding_screen2.dart';
 import 'package:guardians_of_health/user%20pages/intro/onboarding_screen3.dart';
@@ -30,8 +31,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(),
         '/OnboardingScreen1': (context) => const OnboardingScreen1(),
-        'OnboardingScreen2': (context) => const OnboardingScreen2(),
-        'OnboardingScreen3': (context) => const OnboardingScreen3(),
+        '/OnboardingScreen2': (context) => const OnboardingScreen2(),
+        '/OnboardingScreen3': (context) => const OnboardingScreen3(),
+        
       },
     );
   }

@@ -67,8 +67,51 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Lufga',
-                )
-              )
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            Positioned(
+              top: screenHeight * 0.23,
+              right: screenWidth * 0.01 + (30 * 2 * 0.6), 
+              child: Text(
+                'AT',
+                style: TextStyle(
+                  fontSize: 81,
+                  fontWeight: FontWeight.bold,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 5
+                    ..color = Colors.white,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            Positioned(
+              bottom: screenHeight * 0.05,
+              right: screenWidth * 0.05,
+              child: Image.asset(
+                'assets/images/onboarding2.2.png',
+                width: screenWidth * 0.6,
+                height: screenHeight * 0.82,
+                fit: BoxFit.contain,
+              ),
+            ),
+            Positioned(
+              top: screenHeight * 0.23,
+              right: screenWidth * 0.41, // Start at the same left position as the original "NESS"
+              child: Text(
+                'CH',
+                style: TextStyle(
+                  fontSize: 80,
+                  fontWeight: FontWeight.bold,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 5
+                    ..color = Colors.white,
+                ),
+                textAlign: TextAlign.left,
+              ),
             ),
           ],
         ),
