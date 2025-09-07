@@ -193,31 +193,90 @@ class DoctorProfileScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    left: 32.0, // Matched to bottom margin for equal space
-                    bottom: 32.0, // Consistent with the down margin
-                  ),
-                  child: Container(
-                    width: iconSizeResponsive,
-                    height: iconSizeResponsive,
-                    decoration: BoxDecoration(
-                      color: Colors.white, // White background
-                      shape: BoxShape.circle, // Circular shape
-                      border: Border.all(
-                        color: Colors.green, // Green outline
-                        width: 2.0, // Outline thickness
-                      ),
+              child: Column(
+                children: [
+                  Spacer(), // Pushes the icons to the bottom
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10.0), // Added vertical padding to ensure space
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround, // Adjusted for more flexible spacing
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 32.0, // Same left space as email icon
+                            bottom: 32.0, // Consistent with the down margin
+                            right: 15.0, // Increased extra space to the right of email icon
+                          ),
+                          child: Container(
+                            width: iconSizeResponsive,
+                            height: iconSizeResponsive,
+                            decoration: BoxDecoration(
+                              color: Colors.white, // White background
+                              shape: BoxShape.circle, // Circular shape
+                              border: Border.all(
+                                color: Colors.green, // Green outline
+                                width: 2.0, // Outline thickness
+                              ),
+                            ),
+                            child: Icon(
+                              Icons.email,
+                              color: Colors.black, // Black icon
+                              size: iconSizeResponsive * 0.8, // Increased icon size
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            bottom: 32.0, // Consistent with the down margin
+                            left: 15.0, // Increased extra space to the left of phone icon
+                            right: 15.0, // Increased extra space to the right of phone icon
+                          ),
+                          child: Container(
+                            width: iconSizeResponsive,
+                            height: iconSizeResponsive,
+                            decoration: BoxDecoration(
+                              color: Colors.white, // White background
+                              shape: BoxShape.circle, // Circular shape
+                              border: Border.all(
+                                color: Colors.green, // Green outline
+                                width: 2.0, // Outline thickness
+                              ),
+                            ),
+                            child: Icon(
+                              Icons.phone, // Phone call icon
+                              color: Colors.black, // Black icon
+                              size: iconSizeResponsive * 0.8, // Same size as email icon
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: 15.0, // Increased extra space to the left of message icon
+                            right: 32.0, // Same space from right margin as email from left
+                            bottom: 32.0, // Consistent with the down margin
+                          ),
+                          child: Container(
+                            width: iconSizeResponsive,
+                            height: iconSizeResponsive,
+                            decoration: BoxDecoration(
+                              color: Colors.white, // White background
+                              shape: BoxShape.circle, // Circular shape
+                              border: Border.all(
+                                color: Colors.green, // Green outline
+                                width: 2.0, // Outline thickness
+                              ),
+                            ),
+                            child: Icon(
+                              Icons.message, // Message icon
+                              color: Colors.black, // Black icon, kept dark
+                              size: iconSizeResponsive * 0.7, // Reduced size for thinner appearance
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    child: Icon(
-                      Icons.email,
-                      color: Colors.black, // Black icon
-                      size: iconSizeResponsive * 0.8, // Increased icon size
-                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ],
