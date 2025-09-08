@@ -40,6 +40,8 @@ dependencies:
   firebase_auth:
   # IOS firestore
   cloud_firestore:
+
+  flutter_svg: 
   
 
 dev_dependencies:
