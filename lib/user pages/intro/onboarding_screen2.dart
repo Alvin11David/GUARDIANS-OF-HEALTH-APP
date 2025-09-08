@@ -64,7 +64,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                 'MOBILE',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30,
+                  fontSize: 80,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Lufga',
                 ),
@@ -88,7 +88,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
               ),
             ),
             Positioned(
-              bottom: screenHeight * 0.05,
+              bottom: screenHeight * 0.20,
               right: screenWidth * 0.05,
               child: Image.asset(
                 'assets/images/onboarding2.2.png',
@@ -111,6 +111,183 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                     ..color = Colors.white,
                 ),
                 textAlign: TextAlign.left,
+              ),
+            ),
+            Positioned(
+              bottom: screenHeight * 0.05,
+              left: screenWidth * 0.05,
+              right: screenWidth * 0.05,
+              child: Container(
+                width: 370,
+                height: 390,
+                padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top:
+                          2, // Align with the top of the container's content area
+                      left:
+                          (370 - 15 - 15 - 40) / 2.4 +
+                          0, // Center within available width
+                      child: Container(
+                        width: 40, // Fixed circle diameter
+                        height: 40,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Center(
+                          child: Text(
+                            '2',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 50, // Below the circle, adjusted for spacing
+                      left:
+                          (370 - 15 - 15) / 6 +
+                          0, // Center within available width (370 - 30 padding)
+                      child: Text(
+                        'Connect With Experts',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: screenWidth * 0.06, // Responsive font size
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center, // Centered alignment
+                      ),
+                    ),
+                    Positioned(
+                      top:
+                          115, // Below "The Silent Threat", adjusted for spacing
+                      left:
+                          (370 - 15 - 15) / 30 +
+                          0, // Center within available width (370 - 30 padding)
+                      child: Text(
+                        '"Get trusted answers from healthcare\n professionals and access\n verified information\n instatntly"',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: screenWidth * 0.05, // Responsive font size
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.center, // Centered alignment
+                      ),
+                    ),
+                    // Page indicator
+                    Positioned(
+                      top: 250, // Below the last text, adjusted for spacing
+                      left:
+                          (370 - 15 - 15 - 60) / 3 +
+                          23, // Center within available width (60 is total width of 3 dots)
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 10,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.grey,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                          const SizedBox(width: 10), 
+                          Container(
+                            width: 20,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          // Spacing between dots
+                          Container(
+                            width: 10,
+                            height: 10,
+                            decoration: const BoxDecoration(
+                              color: Colors.grey,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // White rectangle below the indicator with "Next" text and icons
+                    Positioned(
+                      top:
+                          300, // Below the page indicator, adjusted for spacing
+                      left:
+                          (370 - 15 - 15 - 230) / 3.5 +
+                          0, // Center within available width (370 - 30 padding)
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/OnboardingScreen3');
+                        },
+                        child: Container(
+                          width: 230, // Fixed width as requested
+                          height: 50, // Fixed height as requested
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(
+                              30,
+                            ), // 30 border radius as requested
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Expanded(
+                                child: Center(
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 40), // Shift "Next" to the right
+                                    child: Text(
+                                      'Next',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 20, // Fixed font size for consistency
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 2), // Right padding of 2
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.fast_forward,
+                                      color: Colors.green,
+                                      size: 30, // Fixed size for consistency
+                                    ),
+                                    const SizedBox(width: 5), // Spacing between icons
+                                    Icon(
+                                      Icons.fast_forward,
+                                      color: Colors.green,
+                                      size: 30, // Fixed size for consistency
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

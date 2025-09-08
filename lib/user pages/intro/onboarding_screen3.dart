@@ -71,12 +71,22 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
               )
             ),
             Positioned(
-              bottom: screenHeight * 0.05,
+              bottom: screenHeight * 0.1, // Adjusted to avoid overlap
+              left: screenWidth * 0.05,
+              child: Image.asset(
+                'assets/images/onboarding2.png',
+                width: screenWidth * 0.5, // Reduced width
+                height: screenHeight * 0.6, // Reduced height
+                fit: BoxFit.contain,
+              ),
+            ),
+            Positioned(
+              bottom: screenHeight * 0.1, // Adjusted to match
               right: screenWidth * 0.05,
               child: Image.asset(
                 'assets/images/onboarding2.2.png',
-                width: screenWidth * 0.6,
-                height: screenHeight * 0.8,
+                width: screenWidth * 0.5, // Reduced width
+                height: screenHeight * 0.6, // Reduced height
                 fit: BoxFit.contain,
               ),
             ),

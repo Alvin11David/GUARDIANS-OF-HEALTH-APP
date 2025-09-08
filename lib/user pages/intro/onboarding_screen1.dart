@@ -234,52 +234,57 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
                       left:
                           (370 - 15 - 15 - 230) / 3.5 +
                           0, // Center within available width (370 - 30 padding)
-                      child: Container(
-                        width: 230, // Fixed width as requested
-                        height: 50, // Fixed height as requested
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(
-                            30,
-                          ), // 30 border radius as requested
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Expanded(
-                              child: Center(
-                                child: Padding(
-                                  padding: EdgeInsets.only(left: 40), // Shift "Next" to the right
-                                  child: Text(
-                                    'Next',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 20, // Fixed font size for consistency
-                                      fontWeight: FontWeight.bold,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/OnboardingScreen2');
+                        },
+                        child: Container(
+                          width: 230, // Fixed width as requested
+                          height: 50, // Fixed height as requested
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(
+                              30,
+                            ), // 30 border radius as requested
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Expanded(
+                                child: Center(
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 40), // Shift "Next" to the right
+                                    child: Text(
+                                      'Next',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 20, // Fixed font size for consistency
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 2), // Right padding of 2
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.fast_forward,
-                                    color: Colors.green,
-                                    size: 30, // Fixed size for consistency
-                                  ),
-                                  const SizedBox(width: 5), // Spacing between icons
-                                  Icon(
-                                    Icons.fast_forward,
-                                    color: Colors.green,
-                                    size: 30, // Fixed size for consistency
-                                  ),
-                                ],
+                              Padding(
+                                padding: const EdgeInsets.only(right: 2), // Right padding of 2
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.fast_forward,
+                                      color: Colors.green,
+                                      size: 30, // Fixed size for consistency
+                                    ),
+                                    const SizedBox(width: 5), // Spacing between icons
+                                    Icon(
+                                      Icons.fast_forward,
+                                      color: Colors.green,
+                                      size: 30, // Fixed size for consistency
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
