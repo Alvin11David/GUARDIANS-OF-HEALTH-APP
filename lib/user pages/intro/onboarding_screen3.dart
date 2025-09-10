@@ -43,7 +43,7 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
                   decoration: BoxDecoration(
                     color: _isGlowing ? Colors.white.withOpacity(0.2) : Colors.transparent,
                     border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(screenWidth * 0.04),
+                    borderRadius: BorderRadius.circular(screenWidth * 0.02),
                   ),
                   child: Text(
                     'Skip',
@@ -233,7 +233,7 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
                           0, // Center within available width (370 - 30 padding)
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/OnboardingScreen3');
+                          Navigator.pushNamed(context, '/UserdashboardScreen');
                         },
                         child: Container(
                           width: 230, // Fixed width as requested

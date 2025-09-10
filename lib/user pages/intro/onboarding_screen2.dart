@@ -43,7 +43,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                   decoration: BoxDecoration(
                     color: _isGlowing ? Colors.white.withOpacity(0.2) : Colors.transparent,
                     border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(screenWidth * 0.04),
+                    borderRadius: BorderRadius.circular(screenWidth * 0.02),
                   ),
                   child: Text(
                     'Skip',

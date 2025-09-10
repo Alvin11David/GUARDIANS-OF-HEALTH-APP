@@ -40,6 +40,8 @@ dependencies:
   firebase_auth:
   # IOS firestore
   cloud_firestore:
+  # Date
+  intl:
   
 
 dev_dependencies:
