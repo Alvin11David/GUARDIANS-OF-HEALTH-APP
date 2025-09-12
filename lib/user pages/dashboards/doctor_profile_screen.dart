@@ -59,7 +59,9 @@ class DoctorProfileScreen extends StatelessWidget {
                       ),
                       child: IconButton(
                         icon: Icon(Icons.notifications_none, color: Colors.black),
-                        onPressed: () {},
+                        onPressed: () {
+                          // Placeholder for future notification functionality
+                        },
                       ),
                     ),
                     Container(
@@ -210,6 +212,7 @@ class DoctorProfileScreen extends StatelessWidget {
                           child: Container(
                             width: iconSizeResponsive,
                             height: iconSizeResponsive,
+                            alignment: Alignment.center, // Ensure contents are centered
                             decoration: BoxDecoration(
                               color: Colors.white, // White background
                               shape: BoxShape.circle, // Circular shape
@@ -218,10 +221,16 @@ class DoctorProfileScreen extends StatelessWidget {
                                 width: 2.0, // Outline thickness
                               ),
                             ),
-                            child: Icon(
-                              Icons.email,
-                              color: Colors.black, // Black icon
-                              size: iconSizeResponsive * 0.8, // Increased icon size
+                            child: IconButton(
+                              padding: EdgeInsets.zero, // Remove default padding
+                              icon: Icon(
+                                Icons.email, // Email icon
+                                color: Colors.black, // Black icon
+                                size: iconSizeResponsive * 0.8, // Increased icon size
+                              ),
+                              onPressed: () {
+                                // Placeholder for future email functionality
+                              },
                             ),
                           ),
                         ),
@@ -234,6 +243,7 @@ class DoctorProfileScreen extends StatelessWidget {
                           child: Container(
                             width: iconSizeResponsive,
                             height: iconSizeResponsive,
+                            alignment: Alignment.center, // Ensure contents are centered
                             decoration: BoxDecoration(
                               color: Colors.white, // White background
                               shape: BoxShape.circle, // Circular shape
@@ -242,10 +252,16 @@ class DoctorProfileScreen extends StatelessWidget {
                                 width: 2.0, // Outline thickness
                               ),
                             ),
-                            child: Icon(
-                              Icons.phone, // Phone call icon
-                              color: Colors.black, // Black icon
-                              size: iconSizeResponsive * 0.8, // Same size as email icon
+                            child: IconButton(
+                              padding: EdgeInsets.zero, // Remove default padding
+                              icon: Icon(
+                                Icons.phone, // Phone call icon
+                                color: Colors.black, // Black icon
+                                size: iconSizeResponsive * 0.8, // Same size as email icon
+                              ),
+                              onPressed: () {
+                                // Placeholder for future phone functionality
+                              },
                             ),
                           ),
                         ),
@@ -258,6 +274,7 @@ class DoctorProfileScreen extends StatelessWidget {
                           child: Container(
                             width: iconSizeResponsive,
                             height: iconSizeResponsive,
+                            alignment: Alignment.center, // Ensure contents are centered
                             decoration: BoxDecoration(
                               color: Colors.white, // White background
                               shape: BoxShape.circle, // Circular shape
@@ -266,10 +283,16 @@ class DoctorProfileScreen extends StatelessWidget {
                                 width: 2.0, // Outline thickness
                               ),
                             ),
-                            child: Icon(
-                              Icons.message, // Message icon
-                              color: Colors.black, // Black icon, kept dark
-                              size: iconSizeResponsive * 0.7, // Reduced size for thinner appearance
+                            child: IconButton(
+                              padding: EdgeInsets.zero, // Remove default padding
+                              icon: Icon(
+                                Icons.message, // Message icon
+                                color: Colors.black, // Black icon, kept dark
+                                size: iconSizeResponsive * 0.7, // Reduced size for thinner appearance
+                              ),
+                              onPressed: () {
+                                // Placeholder for future message functionality
+                              },
                             ),
                           ),
                         ),
