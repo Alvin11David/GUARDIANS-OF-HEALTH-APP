@@ -87,11 +87,22 @@ class _LearnAboutAMRScreenState extends State<LearnAboutAMRScreen> {
                           _circleIcon(Icons.notifications_none, Colors.white,
                               Colors.black),
                           const SizedBox(width: 14),
-                          const CircleAvatar(
-                            radius: 20,
-                            backgroundColor: Colors.white,
-                            backgroundImage:
-                                AssetImage('assets/images/profile.png'),
+                          // User avatar at top left after notification with green border
+                          Container(
+                            padding: const EdgeInsets.all(2), // Border thickness
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: Color(0xFF3FD317), // Green border
+                                width: 3,
+                              ),
+                            ),
+                            child: CircleAvatar(
+                              radius: 18,
+                              backgroundColor: Colors.white,
+                              backgroundImage:
+                                  AssetImage('assets/images/profile.png'),
+                            ),
                           ),
                         ],
                       ),
@@ -171,11 +182,15 @@ class _LearnAboutAMRScreenState extends State<LearnAboutAMRScreen> {
             bottom: 74, // Above the nav bar
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: ListView.builder(
-                itemCount: _cardData.length,
-                itemBuilder: (context, index) {
-                  return _buildExpandableCard(index);
-                },
+              child: Padding(
+                padding: const EdgeInsets.only(top: 40),
+                child: ListView.builder(
+                  padding: const EdgeInsets.only(top: 0, bottom: 0),
+                  itemCount: _cardData.length,
+                  itemBuilder: (context, index) {
+                    return _buildExpandableCard(index);
+                  },
+                ),
               ),
             ),
           ),
